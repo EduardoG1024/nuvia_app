@@ -3,47 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOCIAL APP</title>
+    <title>NUVIA</title>
     <meta name="description" content="Social app AlfaB">
     <meta name="keywords" content="social, app, alfab">
     <meta name="author" content="alfab">
     <meta property="og:image" content="https://alfab.site/img/final-logo.jpeg" />
     <meta property="og:url" content="https://alfab.site/" />
     <link rel="stylesheet" href="social.css">
-    <script src="social.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="app.js" defer></script>
+    <script src="userLocal.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fredoka:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 </head>
 <body>
     <nav>
-        <h1>AlfaB Social App</h1>
-    </nav>
-    <header>
-        <img src="imgSocial/face-logo.png" 
-        alt="logo" 
-        class="logo-banner" 
+        <h1>NUVIA</h1>
+        <img src="imgSocial/cat-logo-bar.png" 
+        alt="cat-logo"
+        class="cat-logo"
         loading="lazy"
         decoding="async">
-    </header>
-    <form>
-        <label for="Nombre">Nombre/Usuario:</label>
-        <input type="text" id="Nombre">
-        <label for="Correo">Correo electronico:</label>
-        <input type="email" name="Correo" id="Correo" placeholder="OPCIONAL / NO REQUERIDO">
-        <!--<label for="Titulo">Titulo del mensaje:</label>
-        <input type="text" id="Titulo">-->
-        <label for="Mensaje">Contenido del mensaje:</label>
-        <input type="text" id="Mensaje">
-        <button id="btnSubmit">Publicar</button>
-    </form>
-    <div id="status-form"></div>
-    <div id="contenido-usuarios"></div>
-    <img src="imgSocial/final-logo.png" 
-    alt="final-pagina" 
-    class="img-footer" 
-    loading="lazy" 
-    decoding="async">
+        <h1>UTC</h1>
+    </nav>
+    <!---->
+    <main>
+        <div class="container-username">
+            <input type="text" id="username" placeholder="Nombre de usuario">
+            <button id="saveUserBtn">Guardar</button>
+        </div>
+        <!--MINI NAVBAR TOP FOR TWEETS COUNT AND PUBLISH TWEETS-->
+        <h2 id="historiaUser">🎃Escribe una historia de terror🎃</h2>
+        <div id="saveStatus"></div>
+        <div class="tweets-count-send">
+            <div class="tweets-count"># tweets</div>
+            <div class="tweets-send">
+                <input type="text" id="userTweet" placeholder="Tweet..." required>
+                <button id="btnTweet">Publicar</button>
+            </div>
+        </div>
+        <!--TWEETS CONTAINER AUTO-GENERATION-->
+        <div class="tweets-container-display"></div>
+    </main>
+    <!--FOOTER-->
+    <footer>
+        @NUVIA - UTC
+    </footer>
 </body>
 </html>
