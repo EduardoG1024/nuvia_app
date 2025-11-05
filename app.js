@@ -5,10 +5,12 @@ const supabaseClient = supabase.createClient(
 );
 // TITLE VERIFICATION
 let user = localStorage.getItem('usernameStudent');
+let userNameView = document.getElementById('userNameView');
 if (user != null) {
-    historiaUser.innerHTML = `🎃Escribe una historia de terror ${user}🎃`;
+    historiaUser.innerHTML = `Escribe un tweet`;
+    userNameView.textContent = user
 } else {
-    historiaUser.innerHTML = '🎃Escribe una historia de terror🎃';
+    historiaUser.innerHTML = 'Escribe un tweet';
 }
 // :v
 const btnSubmit = document.getElementById('btnTweet');

@@ -12,6 +12,7 @@ body{
     width: 100%;
     height: fit-content;
     background-color: #2f2f2f;
+    background: linear-gradient(#7226ff, #160078, #010030);
 }
 h1, h2, p{
     font-family: "Fredoka", cursive;
@@ -29,15 +30,20 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+    position: relative;
     width: 100%;
     height: 70px;
-    background-color: #1f1f1f;
+    background-color: #262335;
+    overflow: hidden;
 }
-.cat-logo{
-    width: 60px;
+.zary-logo{
+    width: 50px;
     height: fit-content;
     cursor: pointer;
-    touch-action: none;
+    /*position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);*/
 }
 main{
     display: flex;
@@ -77,7 +83,7 @@ main{
     border: none;
     border-radius: 3px 50px 50px 3px;
     cursor: pointer;
-    background-color: #4f735c;
+    background-color: #7226ff;
 }
 /*MINI NAVBAR*/
 .tweets-count-send{
@@ -100,7 +106,7 @@ main{
     height: 35px;
     border: none;
     border-radius: 50px 3px 3px 50px;
-    background-color: #4f735c;
+    background-color: #7226ff;
     cursor: pointer;
 }
 .tweets-send{
@@ -124,7 +130,7 @@ main{
     height: 35px;
     border: none;
     border-radius: 3px 50px 50px 3px;
-    background-color: #4f735c;
+    background-color: #7226ff;
     cursor: pointer;
 }
 @media (max-width: 500px) {
@@ -151,7 +157,7 @@ main{
     width: 100%;
     height: fit-content;
     padding: 5px;
-    background-color: #1f1f1f;
+    background-color: #262335;
     border: none;
     border-radius: 5px;
 }
@@ -168,5 +174,5 @@ footer{
     width: 100%;
     height: 70px;
     margin-top: 10px;
-    background-color: #1f1f1f;
+    background-color: #262335;
 }
