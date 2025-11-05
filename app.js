@@ -58,7 +58,7 @@ async function showTweets() {
     .from('nuvia_users_tweets')
     .select('user_name, tweet_user, user_date')
     .order('id', {ascending:false})
-    //.gt('id', 3)
+    .gt('id', 5)
     if (error) {
         console.error(error);
     } else {
@@ -83,7 +83,7 @@ async function changeTweetCount() {
     const { data, error } = await supabaseClient
     .from('nuvia_users_tweets')
     .select('id')
-    let tweetCounter = data.length;
+    let tweetCounter = data.length - 5;
     if (!error) {
         tweetCount.innerHTML = `${tweetCounter} tweets`;
     } else {
